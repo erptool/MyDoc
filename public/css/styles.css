@@ -1,12 +1,17 @@
 /* html, body {
   height:100%;
+
+  /*margin:0px;
 } */
+
 h2 {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 body {
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  min-height: 100vh;
+
 }
 
 #wrap {
@@ -29,7 +34,7 @@ body {
 
 
 .footer {
-    position: fixed;
+    /* position: fixed; */
     height: 40px;
     background-color: #212529;
     bottom: 0px;
