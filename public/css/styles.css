@@ -1,0 +1,43 @@
+/* html, body {
+  height:100%;
+} */
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  margin-bottom: 50px
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px;
+}
+
+ .navbar {
+
+    height: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+
+.footer {
+    position: fixed;
+    height: 40px;
+    background-color: #212529;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding-top: 0px;
+    /* margin-top: 15px; */
+    text-align: center;
+    color:white;
+    font-size: 0.75rem;
+}
