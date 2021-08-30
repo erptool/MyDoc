@@ -35,7 +35,7 @@ app.get("/", function (req,res) {
       const weatherDes = weatherData.weather[0].description
 
       const icon = weatherData.weather[0].icon
-      const wImage = "src=http://openweathermap.org/img/wn/" + icon + "@2x.png width='100' height='100'";
+      const wImage = "src=http://openweathermap.org/img/wn/" + icon + "@2x.png width='300px' height='200px'";
 
 
       // res.write("<p>The conditions are :<h1>" + weatherDes + "</h1></p>");

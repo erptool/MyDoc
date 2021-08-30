@@ -55,3 +55,7 @@ body {
 .subHeadingDescrip {
   font-style: italic;
 }
+
+.row {
+  margin-left: calc(var(--bs-gutter-x) * -.2);
+}
