@@ -2,13 +2,15 @@
 const express = require("express");
 const app = express();
 const https = require("https");
+//const ejs = require("ejs");
 
 const bodyParser = require("body-parser");
 
 //Serve Resources to be used
 //app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(express.static("public"));
+app.set("view engine", "ejs");
 
 app.get("/", function (req,res) {
 
@@ -33,11 +35,14 @@ app.get("/", function (req,res) {
       const weatherDes = weatherData.weather[0].description
 
       const icon = weatherData.weather[0].icon
+      const wImage = "src=http://openweathermap.org/img/wn/" + icon + "@2x.png width='100' height='100'";
 
-      res.write("<p>The conditions are :<h1>" + weatherDes + "</h1></p>");
-      res.write("The current temperature is :<h1>" + temp + "</h1> Degress Celcius in " + city + "<br>");
-      res.write("<img src='http://openweathermap.org/img/wn/" + icon + "@2x.png' width='100' height='100'>");
-      res.send();
+
+      // res.write("<p>The conditions are :<h1>" + weatherDes + "</h1></p>");
+      // res.write("The current temperature is :<h1>" + temp + "</h1> Degress Celcius in " + city + "<br>");
+      // res.write("<img src='http://openweathermap.org/img/wn/" + icon + "@2x.png' width='100' height='100'>");
+      // res.send();
+      res.render("index", {pCity: city,pTemp: temp, pDescrip: weatherDes, pImage: wImage});
 
 
       //console.log(temp)
@@ -58,6 +63,6 @@ app.get("/", function (req,res) {
 
 app.listen(3000, function() {
 
-  console.log("Hello World!");
+  console.log("Server has started on Port 3000");
 
 })

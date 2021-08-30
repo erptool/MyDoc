@@ -6,6 +6,7 @@
 
 h2 {
   font-family: 'Roboto Condensed', sans-serif;
+
 }
 
 body {
@@ -45,4 +46,12 @@ body {
     text-align: center;
     color:white;
     font-size: 0.75rem;
+}
+
+.subHeading {
+  font-weight: bold;
+}
+
+.subHeadingDescrip {
+  font-style: italic;
 }
